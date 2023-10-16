@@ -23,8 +23,6 @@ sudo sed -i "s+# Hostname=Zabbix server+Hostname=$AGENT_HOSTNAME+g" /etc/zabbix/
 sudo systemctl enable zabbix-agent
 sudo systemctl start zabbix-agent
 
-# Install ZeroTier
-curl -s https://install.zerotier.com | sudo bash
 
 
 echo "Zabbix Agent and ZeroTier have been installed and configured."
