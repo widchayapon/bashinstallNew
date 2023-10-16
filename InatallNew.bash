@@ -26,10 +26,5 @@ sudo systemctl start zabbix-agent
 # Install ZeroTier
 curl -s https://install.zerotier.com | sudo bash
 
-# Join a ZeroTier network 
-ZEROTIER_NETWORK_ID="193c0681e005bc1" 
-sudo zerotier-cli join $ZEROTIER_NETWORK_ID
-sleep 10
-sudo zerotier-cli status
 
 echo "Zabbix Agent and ZeroTier have been installed and configured."
