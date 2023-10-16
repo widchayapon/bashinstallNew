@@ -9,7 +9,7 @@ AGENT_HOSTNAME=$(hostname)
 
 # Install Zabbix Agent
 sudo apt update
-sudo apt install zabbix-agent -y
+sudo apt-get install zabbix-agent
 
 
 
@@ -20,7 +20,6 @@ sudo sed -i "s+# Hostname=Zabbix server+Hostname=$AGENT_HOSTNAME+g" /etc/zabbix/
 
 # Enable Zabbix Agent 
 sudo systemctl start zabbix-agent
-sudo systemctl status zabbix-agent
 
 curl -s https://install.zerotier.com | sudo bash
 
