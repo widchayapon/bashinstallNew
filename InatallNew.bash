@@ -16,7 +16,6 @@ sudo apt install zabbix-agent -y
 # Update Zabbix Agent configuration
 sudo sed -i "s+Server=127.0.0.1+Server=$ZABBIX_SERVER+g" /etc/zabbix/zabbix_agentd.conf
 sudo sed -i "s+ServerActive=127.0.0.1+ServerActive=$ZABBIX_SERVER+g" /etc/zabbix/zabbix_agentd.conf
-sudo sed -i "s+# ListenIP=0.0.0.0+ListenIP=$AGENT_IP+g" /etc/zabbix/zabbix_agentd.conf
 sudo sed -i "s+# Hostname=Zabbix server+Hostname=$AGENT_HOSTNAME+g" /etc/zabbix/zabbix_agentd.conf
 
 # Enable Zabbix Agent 
